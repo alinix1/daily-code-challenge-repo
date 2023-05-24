@@ -4,3 +4,8 @@ def abbrev_name(name):
    return result[0] + '.' + result[1]
 
 print(abbrev_name('sam smith'))
+
+def greet(name):
+    return f'Hello, {name} how are you doing today?'
+
+print(greet('Ryan'))
