@@ -29,3 +29,21 @@ def validate_hello(greetings):
     return False
 
 print(validate_hello('ciao bella!'))
+
+def name_shuffler(str_):
+  list_strings = str_.split()
+  list_strings.reverse()
+  separator = ' '
+  return separator.join(list_strings)
+
+print(name_shuffler('john Smith'))
+
+def lovefunc( flower1, flower2 ):
+  if (flower1 % 2) == 0 and (flower2 % 2) != 0: 
+    return True
+  elif (flower1 % 2) != 0 and (flower2 % 2) == 0:
+    return True
+  else: 
+    return False
+    
+print(lovefunc(4, 2))
