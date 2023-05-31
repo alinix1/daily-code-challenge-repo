@@ -142,3 +142,22 @@ function greet(name) {
 }
 
 console.log(greet(null));
+
+const sumSquareEvenRootOdd = (nums) => {
+  let result = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      let newValEven = nums[i] ** 2;
+      result.push(newValEven);
+    } else {
+      let newValOdd = Math.sqrt(nums[i]);
+      result.push(newValOdd);
+    }
+  }
+  let sumTotal = result.reduce(function (acc, num) {
+    return acc + num;
+  }, 0);
+  return Number(sumTotal.toFixed(2));
+};
+
+console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]));

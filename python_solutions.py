@@ -47,3 +47,13 @@ def lovefunc( flower1, flower2 ):
     return False
     
 print(lovefunc(4, 2))
+
+def paperwork(n, m):
+  if n < 0 or m < 0: 
+    return 0
+  elif n < 0 and m < 0:
+    return 0
+  else: 
+    return n * m
+
+print(paperwork(5, 5))
