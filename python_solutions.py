@@ -57,3 +57,25 @@ def paperwork(n, m):
     return n * m
 
 print(paperwork(5, 5))
+
+def no_ifs_no_buts(a, b):
+  if a > b:
+    return f'{a} is greater than {b}'
+  elif b > a: 
+    return f'{b} is greater than {a}'
+  else: 
+    return f'{a} is equal to {b}'
+
+print(no_ifs_no_buts(5, -4))
+
+# not using conditional logic with if/elif/else or ternary operator or switch case
+
+def no_ifs_no_(a, b):
+    while a > b:
+        return f"{a} is greater than {b}"
+    while a < b:
+        return f"{a} is smaller than {b}"
+    while a == b:
+        return f"{a} is equal to {b}"
+      
+print(no_ifs_no_(5, -4))
