@@ -69,6 +69,7 @@ def no_ifs_no_buts(a, b):
 print(no_ifs_no_buts(5, -4))
 
 # not using conditional logic with if/elif/else or ternary operator or switch case
+# solution: use while statement 
 
 def no_ifs_no_(a, b):
     while a > b:
@@ -79,3 +80,43 @@ def no_ifs_no_(a, b):
         return f"{a} is equal to {b}"
       
 print(no_ifs_no_(5, -4))
+
+from math import sqrt
+
+def find_next_square(sq):
+  # check that there is no remainder (perfect square)
+  if sqrt(sq) % 1 == 0:
+  # take the square root of number 
+  # add 1 to that new number value = 11 + 1 = 12
+  # take the square of 12 = 144 
+  # return new number as an integer 
+    return int(sqrt(sq)+ 1)**2
+  else:
+  # otherwise return -1 if not a perfect square 
+    return -1
+     
+print(find_next_square(121))
+
+# 121 --> 144
+# 625 --> 676
+# 114 --> -1 since 114 is not a perfect square
+
+from math import sqrt
+
+def solve(n):
+  # take square root of number and assign to variable 
+  # turn number into integer instead of float 
+  # after getting square root, 
+  # take squre of number 
+  # check if square of number is equal to number passed in as parameter 
+  # return True 
+  # otherwise, return False
+  
+   sq_root = int(sqrt(n))
+   if (sq_root**2) == n:
+     return True
+   else: 
+     return False
+
+print (solve(36))
+
