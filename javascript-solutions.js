@@ -340,10 +340,6 @@ function shortcut(string) {
 
 console.log(shortcut('abracadabra'));
 
-// check length of string
-// return string as an array
-//
-
 const addLength = (str) => {
   var results = [];
   var characters = str.split(' ');
@@ -391,3 +387,18 @@ function consonantCount(str) {
 }
 
 console.log(consonantCount('hello my dear friends!'));
+
+var number = function (array) {
+  return array.map((item, index) => {
+    return index + 1 + ': ' + item;
+  });
+};
+
+console.log(number(['a', 'b', 'c']));
+
+const SmallestIntegerFinder = (arr) => {
+  arr.sort();
+  return arr[0];
+};
+
+console.log(SmallestIntegerFinder([24, 55, -1]));

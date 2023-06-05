@@ -120,3 +120,29 @@ def solve(n):
 
 print (solve(36))
 
+
+import re
+
+def same_case(a, b): 
+
+  match_case1 = re.match(r'^[a-z]+$', a) 
+  
+  match_case2 = re.match(r'^[a-z]+$', b)  
+
+  match_case3 = re.match(r'^[A-Z]+$', a) 
+
+  match_case4 = re.match(r'^[A-Z]+$', b) 
+  
+  if match_case1 and match_case2:
+    return 1
+  elif match_case3 and match_case4:
+    return 1
+  elif match_case1 and match_case4:
+    return 0
+  elif match_case3 and match_case2:
+    return 0
+  else:
+    return -1
+
+print(same_case('?', 'B'))
+
