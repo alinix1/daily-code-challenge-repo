@@ -146,3 +146,27 @@ def same_case(a, b):
 
 print(same_case('?', 'B'))
 
+def remove_char(s):
+    return s[1:-1]
+
+print(remove_char('hello'))
+
+# ('hello') --> ell
+# input: string 
+# output: string that is modified with first character and last character removed 
+
+
+def positive_sum(arr):
+  result = [item for item in arr if item > 0]
+  sum = 0
+
+  for i in range(0, len(result)):
+    sum = sum + result[i]
+
+  if not sum: 
+    return 0
+  else:
+    return sum
+  
+print(positive_sum([1,-4,7,12]))
+
