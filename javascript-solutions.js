@@ -414,3 +414,38 @@ function divisibleBy(numbers, divisor) {
 }
 
 console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2));
+
+function countSheeps(arrayOfSheep) {
+  let countTrue = [];
+  let countFalse = [];
+
+  for (let i = 0; i < arrayOfSheep.length; i++) {
+    if (arrayOfSheep[i] === true) {
+      countTrue.push(arrayOfSheep[i]);
+    } else {
+      countFalse.push(arrayOfSheep[i]);
+    }
+  }
+  return countTrue.length;
+}
+
+function countSheep(arrayOfSheep) {
+  let result = arrayOfSheep.filter((bool) => bool === true);
+  return result.length;
+}
+
+console.log(
+  countSheeps([
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+  ]),
+);

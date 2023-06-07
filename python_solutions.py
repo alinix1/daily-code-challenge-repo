@@ -170,3 +170,16 @@ def positive_sum(arr):
   
 print(positive_sum([1,-4,7,12]))
 
+def no_space(x):
+  return x.replace(" ", "")
+
+print(no_space('8 j 8   mBliB8g  imjB8B8  jl  B'))
+
+def no_space_other(x):
+  x_join = "".join(x.split())
+  return x_join
+  
+print(no_space_other('8 j 8   mBliB8g  imjB8B8  jl  B'))
+
+
+
