@@ -449,3 +449,25 @@ console.log(
     true,
   ]),
 );
+
+function findAverage(array) {
+  if (array.length === 0) {
+    return 0;
+  } else {
+    let result = array.reduce((acc, currentVal) => {
+      acc += currentVal;
+      return acc;
+    }, 0);
+    return result / array.length;
+  }
+}
+
+console.log(findAverage([1, 2, 3, 4, 5, 6, 7]));
+
+const findAvg = (array) => {
+  return array.length === 0
+    ? 0
+    : array.reduce((acc, currentVal) => (acc += currentVal), 0) / array.length;
+};
+
+console.log(findAvg([1, 2, 3, 4, 5, 6, 7]));

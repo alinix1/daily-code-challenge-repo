@@ -120,7 +120,6 @@ def solve(n):
 
 print (solve(36))
 
-
 import re
 
 def same_case(a, b): 
@@ -155,7 +154,6 @@ print(remove_char('hello'))
 # input: string 
 # output: string that is modified with first character and last character removed 
 
-
 def positive_sum(arr):
   result = [item for item in arr if item > 0]
   sum = 0
@@ -181,5 +179,14 @@ def no_space_other(x):
   
 print(no_space_other('8 j 8   mBliB8g  imjB8B8  jl  B'))
 
+def summation(num):
+  result = 0
+  for i in range(1, num + 1):
+    result += i
+  return result
 
+print(summation(8))
+
+# 2 -> 3 (1 + 2)
+# 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
 
