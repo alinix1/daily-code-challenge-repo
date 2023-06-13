@@ -471,3 +471,26 @@ const findAvg = (array) => {
 };
 
 console.log(findAvg([1, 2, 3, 4, 5, 6, 7]));
+
+function feast(beast, dish) {
+  if (beast[0] === dish[0] && beast.slice(-1) === dish.slice(-1)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(feast('great blue heron', 'garlic naan'));
+
+function correct(string) {
+  let updateString = string.split('').join();
+  const result = { 1: 'I', 0: 'O', 5: 'S' };
+
+  let final = updateString.replace(
+    /\b(?:1|0|5)\b/gi,
+    (matched) => result[matched],
+  );
+  return final.replaceAll(',', '');
+}
+
+console.log(correct('L0ND0N'));

@@ -190,3 +190,52 @@ print(summation(8))
 # 2 -> 3 (1 + 2)
 # 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
 
+def find_needle(arr):
+  index = arr.index('needle')
+  return f'found the needle at position {index}'
+
+print(find_needle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))
+
+def rps(p1, p2):
+  outcomes = {'rock', 'paper', 'scissors'}
+  for x in outcomes: 
+    if p1 == 'rock' and p2 == 'scissors':
+      return 'Player 1 won!'
+    elif p1 == 'paper' and p2 == 'scissors':
+      return 'Player 2 won!'
+    elif p1 == 'scissors' and p2 == 'paper':
+      return 'Player 1 won!'
+    elif p1 == 'rock' and p2 == 'paper':
+      return 'Player 2 won!'
+    elif p1 == 'scissors' and p2 == 'rock':
+      return 'Player 2 won!'
+    elif p1 == 'paper' and p2 == 'rock':
+      return 'Player 1 won!'
+    elif p1 == 'paper' and p2 == 'paper':
+      return 'Draw!'
+    elif p1 == 'rock' and p2 == 'rock':
+      return 'Draw!'
+    elif p1 == 'scissors' and p2 == 'scissors':
+      return 'Draw!'
+
+print(rps('paper', 'paper'))
+
+def rps_other(p1, p2):
+    if p1 == p2:
+        return 'Draw!'
+    elif (p1 == 'rock' and p2 == 'scissors') or (p1 == 'scissors' and p2 == 'paper') or (p1 == 'paper' and p2 == 'rock'):
+        return 'Player 1 won!'
+    else:
+        return 'Player 2 won!'
+
+print(rps_other('rock', 'paper'))
+
+def maps(arr):
+  return [x * 2 for x in arr]
+
+print(maps([1, 2, 3]))
+
+
+
+
+
