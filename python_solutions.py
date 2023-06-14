@@ -235,6 +235,13 @@ def maps(arr):
 
 print(maps([1, 2, 3]))
 
+def dna_to_rna(dna):
+  result = list(map(lambda x: x.replace('T', 'U'), dna))
+  final = "".join(result)
+  return final
+
+print(dna_to_rna("GCAT"))
+
 
 
 

@@ -494,3 +494,14 @@ function correct(string) {
 }
 
 console.log(correct('L0ND0N'));
+
+function smash(words) {
+  if (words.length === 0) {
+    return '';
+  } else {
+    let result = words.join(' ').toString();
+    return result;
+  }
+}
+
+console.log(smash(['hello', 'world', 'this', 'is', 'great']));
