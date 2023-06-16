@@ -242,7 +242,12 @@ def dna_to_rna(dna):
 
 print(dna_to_rna("GCAT"))
 
+def grow(arr):
+  result = 1
+  for x in arr:
+    result *= x
+  return result
 
-
+print(grow([1,2,3,4]))
 
 

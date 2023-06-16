@@ -505,3 +505,46 @@ function smash(words) {
 }
 
 console.log(smash(['hello', 'world', 'this', 'is', 'great']));
+
+function twoSort(str) {
+  const lowercaseWords = str.map((word) => word.toLowerCase());
+
+  let sortedStr = lowercaseWords.sort();
+  let final = sortedStr[0];
+
+  return final.replace(/.{1}/g, '***$&').slice(3);
+}
+
+console.log(
+  twoSort([
+    'bitcoin',
+    'Take',
+    'over',
+    'the',
+    'world',
+    'maybe',
+    'who',
+    'knows',
+    'perhaps',
+  ]),
+);
+
+function twoSortString(str) {
+  const lowercaseWords = str.map((word) => word.toLowerCase());
+
+  return lowercaseWords.sort()[0].split('').join('***');
+}
+
+console.log(
+  twoSortString([
+    'bitcoin',
+    'Take',
+    'over',
+    'the',
+    'world',
+    'maybe',
+    'who',
+    'knows',
+    'perhaps',
+  ]),
+);
