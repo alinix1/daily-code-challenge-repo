@@ -250,4 +250,34 @@ def grow(arr):
 
 print(grow([1,2,3,4]))
 
+def human_years_cat_years_dog_years(human_years):
+    catYears = 0
+    dogYears = 0
+    if human_years == 1:
+        catYears += 15
+        dogYears += 15
+        return [human_years, catYears, dogYears]
+    elif human_years == 2:
+        catYears += 24
+        dogYears += 24
+        return [human_years, catYears, dogYears]
+    elif human_years > 2:
+        catYears += 24
+        dogYears += 24
+        years = human_years - 2
+        catYears += years*4
+        dogYears += years*5
+        return [human_years, catYears, dogYears]
+    else:
+    return [0,0,0]
+
+print(human_years_cat_years_dog_years(2))
+
+def get_count(sentence):
+  vowels = ['a', 'e', 'i', 'o', 'u']
+  result = [ vowel for vowel in sentence if vowel in (vowels)]
+  return len(result)
+      
+print(get_count('bcdfghjklmnpqrstvwxz yeaaaaaaa'))
+
 

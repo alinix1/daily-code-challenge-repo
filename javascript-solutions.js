@@ -548,3 +548,15 @@ console.log(
     'perhaps',
   ]),
 );
+
+function highAndLow(numbers) {
+  let result = numbers.split(' ');
+  let result1 = result.map((str) => {
+    return parseInt(str);
+  });
+  let result2 = result1.sort((a, b) => b - a);
+
+  return `${result2[0]} ${result2.slice(-1)}`;
+}
+
+console.log(highAndLow('1 2 -3 4 5'));
