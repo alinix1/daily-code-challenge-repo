@@ -560,3 +560,10 @@ function highAndLow(numbers) {
 }
 
 console.log(highAndLow('1 2 -3 4 5'));
+
+function disemvowel(str) {
+  const noVowels = str.replace(/[aeiou]/gi, '');
+  return noVowels;
+}
+
+console.log(disemvowel('This website is for losers LOL!'));

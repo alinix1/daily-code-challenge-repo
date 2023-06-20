@@ -280,4 +280,11 @@ def get_count(sentence):
       
 print(get_count('bcdfghjklmnpqrstvwxz yeaaaaaaa'))
 
+def to_jaden_case(str):
+  import string
+  result = string.capwords(str)
+  return result
+
+print(to_jaden_case("How can mirrors be real if our eyes aren't real"))
+
 
