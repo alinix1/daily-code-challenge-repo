@@ -567,3 +567,34 @@ function disemvowel(str) {
 }
 
 console.log(disemvowel('This website is for losers LOL!'));
+
+function filterList(arr) {
+  let filtered = [];
+  arr.forEach((item) => {
+    if (typeof item !== 'string') {
+      filtered.push(item);
+    }
+  });
+  return filtered;
+}
+
+console.log(filterList([1, 2, 'a', 'b']));
+
+function filterListFun(arr) {
+  let result = arr.filter((item) => {
+    if (typeof item === 'number') {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return result;
+}
+
+console.log(filterListFun([1, 'a', 'b', 0, 15]));
+
+// function filterListFun(arr) {
+//   return arr.filter(item => typeof item === "number");
+// }
+
+// console.log(filterListFun([1,2,'a','b']))

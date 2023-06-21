@@ -287,4 +287,13 @@ def to_jaden_case(str):
 
 print(to_jaden_case("How can mirrors be real if our eyes aren't real"))
 
+def remove_smallest(numbers):
+  my_list = numbers.copy()
+  if my_list == []:
+    return []
+  my_list.remove(min(my_list))
+  return my_list
+
+print(remove_smallest([2, 1, 5, 4, 3]))
+
 
