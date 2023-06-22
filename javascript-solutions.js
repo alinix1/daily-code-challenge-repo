@@ -598,3 +598,24 @@ console.log(filterListFun([1, 'a', 'b', 0, 15]));
 // }
 
 // console.log(filterListFun([1,2,'a','b']))
+
+function isIsogram(str) {
+  let strLowerCase = str.toLowerCase();
+  let strList = strLowerCase.split('');
+
+  for (let i = 0; i < strList.length; i++) {
+    let index = strList[i];
+    if (strList.indexOf(index) !== strList.lastIndexOf(index)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isIsogram('moOse'));
+
+// approach using RegEx
+
+// function isIsogram(str){
+//   return !str.match(/([a-z]).*\1/i);
+// }
