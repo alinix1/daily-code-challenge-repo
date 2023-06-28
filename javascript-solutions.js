@@ -619,3 +619,23 @@ console.log(isIsogram('moOse'));
 // function isIsogram(str){
 //   return !str.match(/([a-z]).*\1/i);
 // }
+
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+
+console.log(reverseString('this is an example, hello!'));
+
+const capitals = (word) => {
+  let arrChars = word.split('');
+
+  let result = arrChars.map((item, index) => {
+    if (item === item.toUpperCase()) {
+      return index;
+    }
+  });
+  let filtered = result.filter((item) => item !== undefined);
+  return filtered;
+};
+
+console.log(capitals('HeLlo'));

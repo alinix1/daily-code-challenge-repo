@@ -394,3 +394,15 @@ def maskify(cc):
 
 
 print(maskify("4556364607935616"))
+
+
+def reverse_words(text):
+    text = text[::-1].split(" ")
+
+    result = text.copy()
+    result.reverse()
+    final = ' '.join(result)
+    return final
+
+
+print(reverse_words('This is an example!'))
