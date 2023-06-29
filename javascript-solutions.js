@@ -639,3 +639,9 @@ const capitals = (word) => {
 };
 
 console.log(capitals('HeLlo'));
+
+function sortByLength(arr) {
+  return arr.sort((a, b) => a.length - b.length);
+}
+
+console.log(sortByLength(['Telescopes', 'Glasses', 'Eyes', 'Monocles']));
