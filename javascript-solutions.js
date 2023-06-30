@@ -645,3 +645,90 @@ function sortByLength(arr) {
 }
 
 console.log(sortByLength(['Telescopes', 'Glasses', 'Eyes', 'Monocles']));
+
+function countDevelopers(list) {
+  let result = list.reduce((acc, currentContinent) => {
+    if (
+      currentContinent.continent.includes('Europe') &&
+      currentContinent.language.includes('JavaScript')
+    ) {
+      acc.push(currentContinent.continent);
+    }
+    return acc;
+  }, []);
+  return result.length;
+}
+
+var list1 = [
+  {
+    firstName: 'Noah',
+    lastName: 'M.',
+    country: 'Switzerland',
+    continent: 'Europe',
+    age: 19,
+    language: 'JavaScript',
+  },
+  {
+    firstName: 'Maia',
+    lastName: 'S.',
+    country: 'Tahiti',
+    continent: 'Oceania',
+    age: 28,
+    language: 'JavaScript',
+  },
+  {
+    firstName: 'Shufen',
+    lastName: 'L.',
+    country: 'Taiwan',
+    continent: 'Asia',
+    age: 35,
+    language: 'HTML',
+  },
+  {
+    firstName: 'Sumayah',
+    lastName: 'M.',
+    country: 'Tajikistan',
+    continent: 'Asia',
+    age: 30,
+    language: 'CSS',
+  },
+];
+
+console.log(countDevelopers(list1));
+
+function greetDevelopers(list) {
+  let final = list.map((item) => ({
+    ...item,
+    greeting: `Hi ${item.firstName}, what do you like the most about ${item.language}?`,
+  }));
+  return final;
+}
+
+var list1 = [
+  {
+    firstName: 'Sofia',
+    lastName: 'I.',
+    country: 'Argentina',
+    continent: 'Americas',
+    age: 35,
+    language: 'Java',
+  },
+  {
+    firstName: 'Lukas',
+    lastName: 'X.',
+    country: 'Croatia',
+    continent: 'Europe',
+    age: 35,
+    language: 'Python',
+  },
+  {
+    firstName: 'Madison',
+    lastName: 'U.',
+    country: 'United States',
+    continent: 'Americas',
+    age: 32,
+    language: 'Ruby',
+  },
+];
+
+console.log(greetDevelopers(list1));
