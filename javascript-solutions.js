@@ -732,3 +732,25 @@ var list1 = [
 ];
 
 console.log(greetDevelopers(list1));
+
+function convertHashToArray(hash) {
+  var finalResult = [];
+  for (i in hash) {
+    // console.log('each key', i)
+    // console.log('each value', hash[i])
+    finalResult.push([i, hash[i]]);
+  }
+  return finalResult.sort();
+}
+
+// const convertHashToArray = (hash) => {
+//   return Object.entries(hash).sort()
+//  }
+
+console.log(
+  convertHashToArray({ name: 'Jeremy', age: 24, role: 'Software Engineer' }),
+);
+
+// convert hash into array
+// expected output:
+// [["age", 24], ["name", "Jeremy"], ["role", "Software Engineer"]]
