@@ -425,3 +425,14 @@ list1 = [
 ]
 
 print(is_ruby_coming(list1))
+
+
+def is_sorted_and_how(lst):
+    if lst == sorted(lst):
+        return 'yes, ascending'
+    elif lst == sorted(lst, reverse=True):
+        return 'yes, descending'
+    return 'no'
+
+
+print(is_sorted_and_how([10, 9, 8, 3, -11]))
