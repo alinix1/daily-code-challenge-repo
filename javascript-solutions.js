@@ -754,3 +754,103 @@ console.log(
 // convert hash into array
 // expected output:
 // [["age", 24], ["name", "Jeremy"], ["role", "Software Engineer"]]
+
+const mxdiflg = (a1, a2) => {
+  if (a1.length === 0 || a2.length === 0) {
+    return -1;
+  }
+  let l1 = a1.map((str) => {
+    return str.length;
+  });
+
+  let l2 = a2.map((str) => {
+    return str.length;
+  });
+
+  return Math.max(
+    Math.max(...l1) - Math.min(...l2),
+    Math.max(...l2) - Math.min(...l1),
+  );
+};
+
+a1 = [
+  'hoqq',
+  'bbllkw',
+  'oox',
+  'ejjuyyy',
+  'plmiis',
+  'xxxzgpsssa',
+  'xxwwkktt',
+  'znnnnfqknaz',
+  'qqquuhii',
+  'dvvvwz',
+];
+a2 = ['cccooommaaqqoxii', 'gggqaffhhh', 'tttoowwwmmww'];
+
+console.log(mxdiflg(a1, a2));
+
+const outed = (meet, boss) => {
+  const ratings = Object.values(meet);
+  const names = Object.keys(meet);
+
+  const totalScore =
+    ratings.reduce((acc, currentRating) => {
+      return (acc += currentRating);
+    }, 0) + meet[boss];
+
+  return totalScore / names.length > 5 ? 'Nice Work Champ!' : 'Get Out Now!';
+};
+
+console.log(
+  outed(
+    {
+      tim: 0,
+      jim: 2,
+      randy: 0,
+      sandy: 7,
+      andy: 0,
+      katie: 5,
+      laura: 1,
+      saajid: 2,
+      alex: 3,
+      john: 2,
+      mr: 0,
+    },
+    'laura',
+  ),
+);
+
+const outed1 = (meet, boss) => {
+  let names = Object.keys(meet);
+  let ratings = Object.values(meet);
+
+  let total =
+    ratings.reduce((acc, currentRating) => {
+      return acc + currentRating;
+    }, 0) + meet[boss];
+
+  let score = total / names.length;
+
+  if (score <= 5) {
+    return 'Get Out Now!';
+  } else {
+    return 'Nice Work Champ!';
+  }
+};
+
+let meet = {
+  tim: 0,
+  jim: 2,
+  randy: 0,
+  sandy: 7,
+  andy: 0,
+  katie: 5,
+  laura: 1,
+  saajid: 2,
+  alex: 3,
+  john: 2,
+  mr: 0,
+};
+
+let boss = 'laura';
+console.log(outed1(meet, boss));
