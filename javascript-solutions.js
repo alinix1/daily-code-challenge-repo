@@ -854,3 +854,22 @@ let meet = {
 
 let boss = 'laura';
 console.log(outed1(meet, boss));
+
+const winnerList1 = [
+  { season: '1990-00', team: 'Real Madrid', country: 'Spain' },
+  { season: '2000-01', team: 'Bayern Munich', country: 'Germany' },
+  { season: '2001-02', team: 'Real Madrid', country: 'Spain' },
+  { season: '2002-03', team: 'Milan', country: 'Italy' },
+  { season: '2003-04', team: 'Porto', country: 'Portugal' },
+];
+
+const countWins = (winnerList1, country) => {
+  return winnerList1.reduce((acc, currentCountry) => {
+    if (currentCountry.country === country) {
+      acc++;
+    }
+    return acc;
+  }, 0);
+};
+
+console.log(countWins(winnerList1, 'Spain'));

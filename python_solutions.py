@@ -436,3 +436,16 @@ def is_sorted_and_how(lst):
 
 
 print(is_sorted_and_how([10, 9, 8, 3, -11]))
+
+
+def open_or_senior(data):
+    result = []
+    for x in data:
+        if x[0] >= 55 and x[1] > 7:
+            result.append("Senior")
+        else:
+            result.append("Open")
+    return result
+
+
+print(open_or_senior([(45, 12), (55, 21), (19, -2), (104, 20)]))
