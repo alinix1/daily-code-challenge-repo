@@ -873,3 +873,32 @@ const countWins = (winnerList1, country) => {
 };
 
 console.log(countWins(winnerList1, 'Spain'));
+
+var number = function (busStops) {
+  let arr = busStops.flat();
+  let sumEven = 0;
+
+  for (let i in arr) {
+    if (i % 2 === 0) {
+      sumEven = sumEven + arr[i];
+    }
+  }
+
+  let sumOdd = 0;
+
+  for (let i in arr) {
+    if (i % 2 !== 0) {
+      sumOdd = sumOdd + arr[i];
+    }
+  }
+  let final = sumEven - sumOdd;
+  return final;
+};
+
+console.log(
+  number([
+    [10, 0],
+    [3, 5],
+    [5, 8],
+  ]),
+);
