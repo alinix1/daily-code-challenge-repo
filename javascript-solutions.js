@@ -902,3 +902,38 @@ console.log(
     [5, 8],
   ]),
 );
+
+function sortAnimal(animal) {
+  if (animal === null) {
+    return null;
+  }
+
+  let sortName = animal.sort((a, b) => {
+    let fa = a.name.toLowerCase();
+    let fb = b.name.toLowerCase();
+
+    if (fa.localeCompare(fb) < 0) {
+      return -1;
+    } else if (fa.localeCompare(fb) > 0) {
+      return 1;
+    } else if (fa.localeCompare(fb) == 0) {
+      return 0;
+    }
+  });
+
+  let sortNumberOfLegs = sortName.sort((a, b) => {
+    return a.numberOfLegs - b.numberOfLegs;
+  });
+
+  return sortNumberOfLegs;
+}
+var animal = [
+  { name: 'Cat', numberOfLegs: 4 },
+  { name: 'Snake', numberOfLegs: 0 },
+  { name: 'Dog', numberOfLegs: 4 },
+  { name: 'Pig', numberOfLegs: 4 },
+  { name: 'Human', numberOfLegs: 2 },
+  { name: 'Bird', numberOfLegs: 2 },
+];
+
+console.log(sortAnimal(animal));
