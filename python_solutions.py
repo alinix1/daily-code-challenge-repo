@@ -1,3 +1,4 @@
+import math
 import re
 from math import sqrt
 
@@ -449,3 +450,10 @@ def open_or_senior(data):
 
 
 print(open_or_senior([(45, 12), (55, 21), (19, -2), (104, 20)]))
+
+
+def century(year):
+    return math.ceil(year / 100)
+
+
+print(century(1705))
