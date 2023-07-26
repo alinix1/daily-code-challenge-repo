@@ -270,6 +270,34 @@ def rps_other(p1, p2):
 print(rps_other('rock', 'paper'))
 
 
+def rps_other1(p1, p2):
+    outcomes = {'rock', 'paper', 'scissors'}
+    outcome = None
+
+    if p1 == p2:
+        outcome = 'Draw!'
+    else:
+        switch_case = p1 + p2
+        switch_case_reverse = p2 + p1
+
+        switch_outcomes = {
+            'rockscissors': 'Player 1 won!',
+            'paperscissors': 'Player 2 won!',
+            'scissorspaper': 'Player 1 won!',
+            'rockpaper': 'Player 2 won!',
+            'scissorsrock': 'Player 2 won!',
+            'paperrock': 'Player 1 won!'
+        }
+
+        outcome = switch_outcomes.get(
+            switch_case, switch_outcomes.get(switch_case_reverse, None))
+
+    return outcome
+
+
+print(rps_other1('paper', 'paper'))
+
+
 def maps(arr):
     return [x * 2 for x in arr]
 
@@ -457,3 +485,21 @@ def century(year):
 
 
 print(century(1705))
+
+
+def get_length_of_missing_array(arr):
+    if not arr or [] in arr or None in arr:
+        return 0
+
+    sorted_arr = sorted(arr, key=len)
+
+    for x in range(1, len(sorted_arr)):
+        if len(sorted_arr[x]) - len(sorted_arr[x - 1]) > 1:
+            # Return the missing length
+            return len(sorted_arr[x - 1]) + 1
+
+    return len(sorted_arr[-1]) + 1
+
+
+print(get_length_of_missing_array(
+    [[1, 2], [4, 5, 1, 1], [1], [5, 6, 7, 8, 9]]))
