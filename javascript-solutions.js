@@ -937,3 +937,45 @@ var animal = [
 ];
 
 console.log(sortAnimal(animal));
+
+const duplicateEncode = (word) => {
+  let newString = '';
+  let lowerWord = word.toLowerCase();
+  let strArr = lowerWord.split('');
+
+  strArr.forEach((item, index) => {
+    if (strArr.indexOf(item) !== index) {
+      newString += ')';
+    } else if (strArr.lastIndexOf(item) !== index) {
+      newString += ')';
+    } else newString += '(';
+  });
+
+  return newString;
+};
+
+console.log(duplicateEncode('abracadabra'));
+
+const duplicateEncodeOther = (word) => {
+  const charCount = new Map();
+  const lowerWord = word.toLowerCase();
+  let newString = '';
+
+  // Count the occurrences of each character in the word
+  for (const char of lowerWord) {
+    charCount.set(char, (charCount.get(char) || 0) + 1);
+  }
+
+  // Build the new string based on the character counts
+  for (const char of lowerWord) {
+    if (charCount.get(char) > 1) {
+      newString += ')';
+    } else {
+      newString += '(';
+    }
+  }
+
+  return newString;
+};
+
+console.log(duplicateEncodeOther('abracadabra'));
