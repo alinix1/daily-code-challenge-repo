@@ -979,3 +979,17 @@ const duplicateEncodeOther = (word) => {
 };
 
 console.log(duplicateEncodeOther('abracadabra'));
+
+const twoSum = (numbers, target) => {
+  let result = [];
+  numbers.forEach((num1, index1) => {
+    numbers.forEach((num2, index2) => {
+      if (num1 + num2 === target && index1 !== index2) {
+        result = [index1, index2];
+      }
+    });
+  });
+  return result;
+};
+
+console.log(twoSum([1, 2, 3], 4));
