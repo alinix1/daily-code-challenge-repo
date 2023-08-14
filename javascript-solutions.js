@@ -993,3 +993,28 @@ const twoSum = (numbers, target) => {
 };
 
 console.log(twoSum([1, 2, 3], 4));
+
+const createPhoneNumber = (numbers) => {
+  let stringNum = numbers.join('');
+  let strStart = numbers.slice(0, 6).join('');
+  let strRemaining = numbers.splice(6, 4).join('');
+  let dash = '';
+  let opening = '';
+  let final = '';
+
+  for (let i = 0; i < stringNum.length; i++) {
+    if (stringNum[5]) {
+      dash = strStart + '-' + strRemaining;
+    }
+    if (stringNum[0]) {
+      opening = '(' + strStart[0] + strStart[1] + strStart[2] + ')';
+    }
+
+    let result = dash.slice(3);
+    final = opening + ' ' + result;
+  }
+
+  return final;
+};
+
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
