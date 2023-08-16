@@ -505,3 +505,26 @@ print(get_length_of_missing_array(
     [[1, 2], [4, 5, 1, 1], [1], [5, 6, 7, 8, 9]]))
 
 
+def find_short(s):
+    lst = s.split()
+    sorted_lst = sorted(lst, key=len)
+    # sort_str = s.sort()
+    print(sorted_lst)
+    return len((sorted_lst[0]))
+
+
+print(find_short("bitcoin take over the world maybe who knows perhaps"))
+
+
+def reverse_words1(text):
+    final = text[::-1].split(' ')
+    print(final)
+
+    reversed_list = []
+    for x in final:
+        reversed_list = [x] + reversed_list
+
+    return ' '.join(reversed_list)
+
+
+print(reverse_words1("This is an example!"))
