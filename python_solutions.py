@@ -528,3 +528,14 @@ def reverse_words1(text):
 
 
 print(reverse_words1("This is an example!"))
+
+
+def capitals(string):
+    result = []
+    for i in range(len(string)):
+        if string[i].isupper():
+            result.append(i)
+    return result
+
+
+print(capitals('OneTwoThree'))
