@@ -539,3 +539,24 @@ def capitals(string):
 
 
 print(capitals('OneTwoThree'))
+
+
+def disemvowel(string_):
+    vowels = {'i', 'o', 'a', 'u', 'e', 'I', 'E', 'O', 'A', 'U'}
+    string_.lower()
+    return ''.join([c for c in string_ if c not in vowels])
+
+
+print(disemvowel('LOL'))
+
+
+def square_digits(num):
+    final = []
+    list_of_digits = [int(i) for i in str(num)]
+
+    for x in list_of_digits:
+
+        result = x**2
+        final.append(result)
+    result = ''.join(str(x) for x in final)
+    return int(result)
