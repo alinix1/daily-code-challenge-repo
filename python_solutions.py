@@ -560,3 +560,6 @@ def square_digits(num):
         final.append(result)
     result = ''.join(str(x) for x in final)
     return int(result)
+
+
+print(square_digits(1245))

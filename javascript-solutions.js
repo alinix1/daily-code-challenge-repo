@@ -1018,3 +1018,18 @@ const createPhoneNumber = (numbers) => {
 };
 
 console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+function spinWords(string) {
+  let listString = string.split(' ');
+
+  let reversedString = listString.map((strItem) => {
+    if (strItem.length >= 5) {
+      return strItem.split('').reverse().join('');
+    } else {
+      return strItem;
+    }
+  });
+  return reversedString.join(' ');
+}
+
+console.log(spinWords('Hey fellow warriors'));
