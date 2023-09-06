@@ -563,3 +563,16 @@ def square_digits(num):
 
 
 print(square_digits(1245))
+
+
+def square_digits1(num):
+
+    list_of_digits = [int(i) for i in str(num)]
+
+    square_nums = list(map(lambda x: x ** 2, list_of_digits))
+
+    final = ''.join(str(x) for x in square_nums)
+    return int(final)
+
+
+print(square_digits1(1245))
