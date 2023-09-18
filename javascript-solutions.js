@@ -1033,3 +1033,28 @@ function spinWords(string) {
 }
 
 console.log(spinWords('Hey fellow warriors'));
+
+function high(x) {
+  const words = x.split(' ');
+  let maxScore = 0;
+  let maxWord = '';
+
+  for (const word of words) {
+    let score = 0;
+    console.log('word', word);
+
+    for (const char of word) {
+      console.log('character', char);
+      score += char.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
+    }
+
+    if (score > maxScore) {
+      maxScore = score;
+      maxWord = word;
+    }
+  }
+
+  return maxWord;
+}
+
+console.log(high('man i need a taxi up to ubud'));

@@ -556,7 +556,7 @@ def square_digits(num):
 
     for x in list_of_digits:
 
-        result = x**2
+        result = x ** 2
         final.append(result)
     result = ''.join(str(x) for x in final)
     return int(result)
