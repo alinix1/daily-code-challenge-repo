@@ -1058,3 +1058,24 @@ function high(x) {
 }
 
 console.log(high('man i need a taxi up to ubud'));
+
+const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(
+  '',
+);
+
+const findMissingLetter = (array) => {
+  // get first index of alphabet array
+  // get last index of alphabet array
+
+  const startAlphabet = alphabet.indexOf(array[0]);
+
+  const endAlphabet = alphabet.indexOf(array[array.length - 1]);
+
+  const slicedAlphabet = alphabet.slice(startAlphabet, endAlphabet + 1);
+
+  let missingLetters = slicedAlphabet.filter((char) => !array.includes(char));
+
+  return missingLetters.join('');
+};
+
+console.log(findMissingLetter(['a', 'c', 'd', 'f']));
