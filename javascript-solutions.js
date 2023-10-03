@@ -1079,3 +1079,23 @@ const findMissingLetter = (array) => {
 };
 
 console.log(findMissingLetter(['a', 'c', 'd', 'f']));
+
+function findOdd(A) {
+  const count = {};
+
+  for (const element of A) {
+    if (count[element]) {
+      count[element] += 1;
+    } else {
+      count[element] = 1;
+    }
+  }
+
+  for (item in count) {
+    if (count[item] % 2 !== 0) {
+      return Number(item);
+    }
+  }
+}
+
+console.log(findOdd([1, 1, 2]));
