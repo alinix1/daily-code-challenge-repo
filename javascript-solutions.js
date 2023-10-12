@@ -1099,3 +1099,40 @@ function findOdd(A) {
 }
 
 console.log(findOdd([1, 1, 2]));
+
+// function likes(names) {
+//   if (names.length === 0) {
+//     return 'no one likes this';
+//   }
+
+//   if (names.length === 1) {
+//     return `${names[0]} likes this`;
+//   } else if (names.length === 2) {
+//     return `${names[0]} and ${names[1]} like this`;
+
+//   } else if (names.length === 3) {
+//     return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+//   } else {
+//     const othersCount = names.length - 2;
+//     return `${names[0]}, ${names[1]} and ${othersCount} others like this`;
+//   }
+// }
+
+// console.log(likes(['Ali', 'Jordan', 'Brian', 'Mika', 'Lucky']));
+
+function likes(names) {
+  switch (names.length) {
+    case 0:
+      return 'no one likes this';
+    case 1:
+      return `${names[0]} likes this`;
+    case 2:
+      return `${names[0]} and ${names[1]} like this`;
+    default:
+      return `${names[0]}, ${names[1]} and ${
+        names.length - 2
+      } others like this`;
+  }
+}
+
+console.log(likes(['Ali', 'Jordan', 'Brian', 'Mika', 'Lucky']));
