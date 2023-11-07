@@ -1,3 +1,4 @@
+from collections import Counter
 import math
 import re
 from math import sqrt
@@ -576,3 +577,19 @@ def square_digits1(num):
 
 
 print(square_digits1(1245))
+
+
+def most_frequent_item_count(collection):
+
+    item_counts = Counter(collection)
+
+    if not item_counts:
+        return 0
+
+    most_common = item_counts.most_common(1)
+
+    return most_common[0][1]
+
+
+result = most_frequent_item_count([3, -1, -1])
+print(result)
