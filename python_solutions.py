@@ -608,3 +608,19 @@ def solution(s):
 
 
 print(solution("HelloDudeHello"))
+
+
+def solution1(s):
+    string_result = ""
+
+    for char in s:
+        if char.upper() == char:
+            string_result += " " + char
+
+        else:
+            string_result += char
+
+    return string_result
+
+
+print(solution1("helloworld"))
