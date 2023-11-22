@@ -593,3 +593,18 @@ def most_frequent_item_count(collection):
 
 result = most_frequent_item_count([3, -1, -1])
 print(result)
+
+
+def solution(s):
+    result_upper = re.findall(r'[A-Z][a-z]*', s)
+
+    if result_upper:
+        result_lower = re.split(r'([A-Z][a-z]*)', s)
+
+        final = ' '.join(filter(lambda x: x, result_lower))
+        return final
+    else:
+        return s
+
+
+print(solution("HelloDudeHello"))
