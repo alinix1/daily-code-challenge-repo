@@ -1,3 +1,5 @@
+// CODE WAR PROBLEMS
+
 const getLength = (str) => {
   var results = [];
   var characters = str.split(' ');
@@ -1136,3 +1138,32 @@ function likes(names) {
 }
 
 console.log(likes(['Ali', 'Jordan', 'Brian', 'Mika', 'Lucky']));
+
+// HACKER RANK PROBLEMS
+
+function breakingRecords(scores) {
+  if (!scores || scores.length === 0) {
+    return [0, 0];
+  }
+
+  let maxScore = scores[0];
+  let minScore = scores[0];
+
+  let maxNumBreaks = 0;
+  let minNumBreaks = 0;
+
+  for (let i = 1; i < scores.length; i++) {
+    if (scores[i] > maxScore) {
+      maxScore = scores[i];
+      maxNumBreaks++;
+    } else if (scores[i] < minScore) {
+      minScore = scores[i];
+      minNumBreaks++;
+    }
+  }
+
+  // Return an array containing maxBreaks and minBreaks
+  return [maxNumBreaks, minNumBreaks];
+}
+
+console.log(breakingRecords([10, 5, 20, 20, 4, 5, 3, 25, 1]));
