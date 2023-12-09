@@ -1141,6 +1141,59 @@ console.log(likes(['Ali', 'Jordan', 'Brian', 'Mika', 'Lucky']));
 
 // HACKER RANK PROBLEMS
 
+function plusMinus(arr) {
+  let posCount = 0;
+  let negCount = 0;
+  let zeroCount = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      posCount++;
+    } else if (arr[i] < 0) {
+      negCount++;
+    } else {
+      zeroCount++;
+    }
+  }
+
+  const total = arr.length;
+
+  let posTotal = posCount / total;
+  console.log(posTotal.toFixed(6));
+
+  let negTotal = negCount / total;
+  console.log(negTotal.toFixed(6));
+
+  let zeroTotal = zeroCount / total;
+  console.log(zeroTotal.toFixed(6));
+}
+
+console.log(plusMinus([1, 1, 0, -1, -1]));
+
+function miniMaxSum(arr) {
+  let minSum = 0;
+  let maxSum = 0;
+
+  let sortedArr = arr.sort();
+
+  let minAdd = sortedArr.slice(0, -1);
+
+  let maxAdd = sortedArr.slice(1);
+
+  minAdd.forEach((num) => {
+    minSum = minSum += num;
+  });
+
+  maxAdd.forEach((num) => {
+    maxSum = maxSum += num;
+  });
+
+  console.log(minSum + ' ' + maxSum);
+  return minSum + ' ' + maxSum;
+}
+
+console.log(miniMaxSum([1, 3, 5, 7, 9]));
+
 function breakingRecords(scores) {
   if (!scores || scores.length === 0) {
     return [0, 0];
@@ -1167,3 +1220,31 @@ function breakingRecords(scores) {
 }
 
 console.log(breakingRecords([10, 5, 20, 20, 4, 5, 3, 25, 1]));
+
+function lonelyinteger(a) {
+  // checks if array length is less than or equal to 1
+  // if so, return the array
+
+  if (a.length <= 1) {
+    return a;
+
+    // otherwise proceed with this logic
+  } else {
+    let filteredArr = a.filter((integer, index) => {
+      //remove current integer at the current index
+
+      a.splice(index, 1);
+
+      const unique = !a.includes(integer);
+
+      //at position index, add back the integer that is not included
+
+      a.splice(index, 0, integer);
+
+      return unique;
+    });
+    return filteredArr;
+  }
+}
+
+console.log(lonelyinteger([1, 1, 2]));
