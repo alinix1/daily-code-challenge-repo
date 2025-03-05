@@ -12,6 +12,7 @@ Created this repository to hold me accountable as I learn and grow while program
 
 - Python
 - JavaScript
+- SQL
 
 ![code_wars](https://user-images.githubusercontent.com/28677929/243454740-c57ddbee-ecb0-4071-89e9-c2083e44ff95.jpg)
 
