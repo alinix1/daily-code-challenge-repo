@@ -30,14 +30,18 @@ console.log(password("Ab1!@#$%^&*()-_+={}[]|:;?/>.<,"));
 // The shape grows by adding squares around the previous shape
 
 function perimeterSequence(a, n) {
+  // solution that makes most sense for me
+  if ((a > 0) & (n > 0)) {
+    return a * 4 * n;
+  }
   // First shape is a single square with side length a
   // Square has 4 sides
-  if (n === 1) {
-    return 4 * a;
-  }
+  // if (n === 1) {
+  //   return 4 * a;
+  // }
 
   // The perimeter increases by additional sides
-  return 4 * a + (n - 1) * 4 * a;
+  // return 4 * a + (n - 1) * 4 * a;
 }
 
 console.log(perimeterSequence(1, 3));
