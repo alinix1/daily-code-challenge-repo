@@ -41,7 +41,7 @@ const getZodiacSign = (day, month) => {
       return sign;
     }
   }
-  // otherwise return invalidate date
+  // otherwise return invalid date
   return "Invalid date";
 };
 
